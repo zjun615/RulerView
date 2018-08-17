@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_rule_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RuleView:"
+            android:textStyle="bold"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="0.0"
+            android:textColor="#48b975"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tv_value"
+            android:layout_toRightOf="@+id/tv_value"
+            android:paddingTop="4dp"
+            android:text="kg"
+            android:textColor="#48b975"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <com.zjun.widget.RuleView
+        android:id="@+id/gv_1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:padding="50dp"
+        app:zjun_textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_rule_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings: " />
+
+        <Button
+            android:id="@+id/btn_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:onClick="onClick"
+            android:text="to: 50"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:textAllCaps="false"
+            android:text="Change" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_money_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MoneySelectRuleView:"
+            android:textStyle="bold"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_money_indicator"
+            android:layout_centerInParent="true"
+            android:text="1000"
+            android:textColor="#ccc92f"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+    <com.zjun.widget.MoneySelectRuleView
+        android:id="@+id/msrv_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_money_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings:" />
+
+        <EditText
+            android:id="@+id/et_new_money"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="newValue"
+            android:inputType="number"
+            android:text="5888"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_set_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Money"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_set_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="Balance"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TimeRuleView:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_time_rule_view_bg"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textColor="#666" />
+    </RelativeLayout>
+
+    <com.zjun.widget.TimeRuleView
+        android:id="@+id/trv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

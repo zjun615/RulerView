@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--公用属性-->
+    <!--背景色-->
+    <attr name="zjun_bgColor" format="reference|color" />
+    <!--刻度颜色-->
+    <attr name="zjun_gradationColor" format="reference|color" />
+    <!--刻度字体颜色-->
+    <attr name="zjun_textColor" format="reference|color" />
+    <!--刻度字体大小-->
+    <attr name="zjun_textSize" format="reference|dimension" />
+    <!--中间指针线颜色-->
+    <attr name="zjun_indicatorLineColor" format="reference|color" />
+    <!--中间指针线宽度-->
+    <attr name="zjun_indicatorLineWidth" format="reference|dimension" />
+
+    <!--普通卷尺控件-->
+    <declare-styleable name="RuleView">
+        <!--背景色-->
+        <attr name="zjun_bgColor" />
+        <!--刻度颜色-->
+        <attr name="zjun_gradationColor" />
+        <!--短刻度线宽度-->
+        <attr name="gv_shortLineWidth" format="reference|dimension" />
+        <!--长刻度线宽度-->
+        <attr name="gv_longLineWidth" format="reference|dimension" />
+        <!--短刻度长度-->
+        <attr name="gv_shortGradationLen" format="reference|dimension" />
+        <!--长刻度长度-->
+        <attr name="gv_longGradationLen" format="reference|dimension" />
+        <!--刻度字体颜色-->
+        <attr name="zjun_textColor" />
+        <!--刻度字体大小-->
+        <attr name="zjun_textSize" />
+        <!--中间指针线颜色-->
+        <attr name="zjun_indicatorLineColor" />
+        <!--中间指针线宽度-->
+        <attr name="zjun_indicatorLineWidth" />
+        <!--中间指针线长度-->
+        <attr name="gv_indicatorLineLen" format="reference|dimension" />
+        <!--最小值-->
+        <attr name="gv_minValue" format="reference|float" />
+        <!--最大值-->
+        <attr name="gv_maxValue" format="reference|float" />
+        <!--当前值-->
+        <attr name="gv_currentValue" format="reference|float" />
+        <!--刻度最小单位-->
+        <attr name="gv_gradationUnit" format="reference|float" />
+        <!--需要绘制数值之间的最小单位个数-->
+        <attr name="gv_numberPerCount" format="reference|integer" />
+        <!--刻度间距离-->
+        <attr name="gv_gradationGap" format="reference|dimension" />
+        <!--刻度与文字的间距-->
+        <attr name="gv_gradationNumberGap" format="reference|dimension" />
+    </declare-styleable>
+
+    <!--金额选择卷尺控件-->
+    <declare-styleable name="MoneySelectRuleView">
+        <!--背景色-->
+        <attr name="zjun_bgColor" />
+        <!--刻度颜色-->
+        <attr name="zjun_gradationColor" />
+        <!--刻度和数值的总高度-->
+        <attr name="msrv_gradationHeight" format="dimension|reference"/>
+        <!--短刻度长度-->
+        <attr name="msrv_gradationShortLen" format="dimension|reference"/>
+        <!--长刻度长度-->
+        <attr name="msrv_gradationLongLen" format="dimension|reference"/>
+        <!--短刻度宽度-->
+        <attr name="msrv_gradationShortWidth" format="dimension|reference"/>
+        <!--长刻度宽度-->
+        <attr name="msrv_gradationLongWidth" format="dimension|reference"/>
+        <!--刻度与数值的间距-->
+        <attr name="msrv_gradationValueGap" format="dimension|reference"/>
+        <!--最小单位间距-->
+        <attr name="msrv_unitGap" format="dimension|reference"/>
+        <!--刻度数值文字大小-->
+        <attr name="msrv_gradationTextSize" format="dimension|reference"/>
+        <!--刻度数值颜色-->
+        <attr name="zjun_textColor" />
+        <!--中间指针颜色-->
+        <attr name="zjun_indicatorLineColor" />
+        <!--余额文字大小-->
+        <attr name="msrv_balanceTextSize" format="dimension|reference"/>
+        <!--余额文字内容-->
+        <attr name="msrv_balanceText" format="string|reference"/>
+        <!--余额文字与刻度尺的距离-->
+        <attr name="msrv_balanceGap" format="dimension|reference"/>
+        <!--余额数值-->
+        <attr name="msrv_balanceValue" format="integer|reference"/>
+        <!--最大值-->
+        <attr name="msrv_maxValue" format="integer|reference"/>
+        <!--当前值-->
+        <attr name="msrv_currentValue" format="integer|reference"/>
+        <!--最小单位，每隔所占的数值-->
+        <attr name="msrv_valueUnit" format="integer|reference"/>
+        <!--每多少隔，换长刻度-->
+        <attr name="msrv_valuePerCount" format="integer|reference"/>
+    </declare-styleable>
+
+    <!--时间尺控件-->
+    <declare-styleable name="TimeRuleView">
+        <attr name="zjun_bgColor" />
+        <!--刻度颜色-->
+        <attr name="zjun_gradationColor" />
+        <!--时间块的高度-->
+        <attr name="trv_partHeight" format="dimension|reference" />
+        <!--时间块的颜色-->
+        <attr name="trv_partColor" format="color|reference" />
+        <!--刻度宽度-->
+        <attr name="trv_gradationWidth" format="dimension|reference" />
+        <!--秒刻度的长度-->
+        <attr name="trv_secondLen" format="dimension|reference" />
+        <!--分刻度的长度-->
+        <attr name="trv_minuteLen" format="dimension|reference" />
+        <!--时刻度的长度-->
+        <attr name="trv_hourLen" format="dimension|reference" />
+        <!--刻度数值颜色-->
+        <attr name="trv_gradationTextColor" format="color|reference" />
+        <!--刻度数值大小-->
+        <attr name="trv_gradationTextSize" format="dimension|reference" />
+        <!--刻度数值与时刻度的距离-->
+        <attr name="trv_gradationTextGap" format="dimension|reference" />
+        <!--当前时间，单位：s-->
+        <attr name="trv_currentTime" format="integer|reference" />
+        <!--中间指针线颜色-->
+        <attr name="zjun_indicatorLineColor" />
+        <!--中间指针线宽度-->
+        <attr name="zjun_indicatorLineWidth" />
+        <!--中间指针上三角形的边长-->
+        <attr name="trv_indicatorTriangleSideLen" format="dimension|reference" />
+
+    </declare-styleable>
+
+</resources>
