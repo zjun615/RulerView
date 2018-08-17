@@ -4,13 +4,16 @@
 demo中，分别用三个控件，高仿了薄荷健康的体重尺、团贷网的金额尺、海康威视下萤石云视频的时间尺
 
 ## 一、效果图
-
+> 全部效果:
 ![allGif](https://github.com/zjun615/RuleView/blob/master/img/all.gif)
 
+> RuleView:
 ![ruleGif](https://github.com/zjun615/RuleView/blob/master/img/ruleView.gif)
 
+> MoneySelectRuleView:
 ![moneyGif](https://github.com/zjun615/RuleView/blob/master/img/money.gif)
 
+> TimeRuleView:
 ![timeGif](https://github.com/zjun615/RuleView/blob/master/img/time.gif)
 
 
