@@ -25,9 +25,9 @@ import android.widget.Scroller;
  *
  * 参考：{@link RuleView}
  *
- * @author Ralap
- * @description
- * @date 2018/8/9
+ * Author: Ralap
+ * Description:
+ * Date 2018/8/9
  */
 public class MoneySelectRuleView extends View {
 
@@ -82,6 +82,7 @@ public class MoneySelectRuleView extends View {
     public interface OnValueChangedListener {
         /**
          * 当值变化时调用
+         * @param newValue 变化后的新值
          */
         void onValueChanged(int newValue);
 
@@ -138,7 +139,7 @@ public class MoneySelectRuleView extends View {
         gradationShortWidth = ta.getDimension(R.styleable.MoneySelectRuleView_msrv_gradationShortWidth, 1);
         gradationLongWidth = ta.getDimension(R.styleable.MoneySelectRuleView_msrv_gradationLongWidth, gradationShortWidth);
         gradationValueGap = ta.getDimension(R.styleable.MoneySelectRuleView_msrv_gradationValueGap, dp2px(8));
-        gradationTextSize = ta.getDimension(R.styleable.MoneySelectRuleView_msrv_balanceTextSize, sp2px(12));
+        gradationTextSize = ta.getDimension(R.styleable.MoneySelectRuleView_msrv_gradationTextSize, sp2px(12));
         gradationTextColor = ta.getColor(R.styleable.MoneySelectRuleView_zjun_textColor, Color.GRAY);
         indicatorColor = ta.getColor(R.styleable.MoneySelectRuleView_zjun_indicatorLineColor, Color.parseColor("#eb4c1c"));
         balanceTextSize = ta.getDimension(R.styleable.MoneySelectRuleView_msrv_balanceTextSize, sp2px(10));
@@ -383,6 +384,8 @@ public class MoneySelectRuleView extends View {
     /**
      * 设置值
      * 注意：这里不需要回调，否则会改变原数据
+     *
+     * @param value 当前金额
      */
     public void setValue(float value) {
         // 向下取整

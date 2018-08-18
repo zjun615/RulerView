@@ -31,9 +31,9 @@ import android.widget.Scroller;
  *  4. 滑动停止后，自动调整到最近的刻度：使用滑动器Scroller，需要计算出最终要抵达的位置
  *  5. 惯性滑动：使用速度跟踪器VelocityTracker
  *
- * @author Ralap
- * @description 刻度控件
- * @date 2018/7/29
+ * Author: Ralap
+ * Description:
+ * Date 2018/7/29
  */
 public class RuleView extends View {
     private static final boolean LOG_ENABLE = BuildConfig.DEBUG;

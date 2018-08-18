@@ -45,9 +45,9 @@ import java.util.List;
  *    MOVE 都是一样的
  *  - 时间块，由起始时间与终止时间组成，采用一个有序的集合来装入即可
  *
- * @author Ralap
- * @description
- * @date 2018/8/11
+ * Author: Ralap
+ * Description:
+ * Date 2018/8/11
  */
 public class TimeRuleView extends View {
 
@@ -578,7 +578,7 @@ public class TimeRuleView extends View {
     /**
      * 格式化时间 HH:mm
      * @param timeValue 具体时间值
-     * @return 格式化后的字符串，eg：3600 -> 01:00
+     * @return 格式化后的字符串，eg：3600 to 01:00
      */
     public static String formatTimeHHmm(@IntRange(from = 0, to = MAX_TIME_VALUE) int timeValue) {
         if (timeValue < 0){
@@ -601,7 +601,7 @@ public class TimeRuleView extends View {
     /**
      * 格式化时间 HH:mm:ss
      * @param timeValue 具体时间值
-     * @return 格式化后的字符串，eg：3601 -> 01:00:01
+     * @return 格式化后的字符串，eg：3600 to 01:00:00
      */
     public static String formatTimeHHmmss(@IntRange(from = 0, to = MAX_TIME_VALUE) int timeValue) {
         int hour = timeValue / 3600;
@@ -644,13 +644,15 @@ public class TimeRuleView extends View {
 
     /**
      * 设置时间变化监听事件
+     * @param listener 监听回调
      */
     public void setOnTimeChangedListener(OnTimeChangedListener listener) {
         this.mListener = listener;
     }
 
     /**
-     * 设置时间块集合
+     * 设置时间块（段）集合
+     * @param timePartList 时间块集合
      */
     public void setTimePartList(List<TimePart> timePartList) {
         this.mTimePartList = timePartList;
@@ -659,6 +661,7 @@ public class TimeRuleView extends View {
 
     /**
      * 设置当前时间
+     * @param currentTime 当前时间
      */
     public void setCurrentTime(@IntRange(from = 0, to = MAX_TIME_VALUE) int currentTime) {
         this.currentTime = currentTime;
