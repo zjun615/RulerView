@@ -174,8 +174,24 @@ zjun_indicatorLineColor | 中间指针的颜色 | Color.RED
  
 ## 六、参考
 
-[1] [TapeView](https://github.com/jdqm/TapeView)
+[1] [带你实现漂亮的滑动卷尺](https://mp.weixin.qq.com/s?__biz=MzIyNTY4NjU0OQ==&mid=2247485213&idx=1&sn=97fb5d0645f0bb0eb2c5c51db4454b59&chksm=e87aa267df0d2b71d53fa2267b12afae265df585246e8ce5e2edc32d9c57bad6fbd78ec0469c&mpshare=1&scene=23&srcid=0717uZbDuuzfAGiZKvVaft9k#rd)
 
-[2] [GcsSloop](http://www.gcssloop.com/)
+[2] [安卓自定义View进阶-缩放手势检测(ScaleGestureDecetor)](http://www.gcssloop.com/customview/scalegesturedetector)
 
-[3] [手把手教你发布自己的开源库到 Jcenter](https://mp.weixin.qq.com/s?__biz=MzIwMTAzMTMxMg==&mid=2649492998&idx=1&sn=015de305fa8cb125caf25d072165f6e8&chksm=8eec85f9b99b0cef30052e7333129ee1ffbba1600ebe5529b05c7d67a7690438ae7180acc804&mpshare=1&scene=23&srcid=0818WK605Hl5ctCkIBFtDP5q#rd)
+[3] [安卓自定义View进阶-MotionEvent详解](http://www.gcssloop.com/customview/motionevent)
+
+[4] [手把手教你发布自己的开源库到 Jcenter](https://mp.weixin.qq.com/s?__biz=MzIwMTAzMTMxMg==&mid=2649492998&idx=1&sn=015de305fa8cb125caf25d072165f6e8&chksm=8eec85f9b99b0cef30052e7333129ee1ffbba1600ebe5529b05c7d67a7690438ae7180acc804&mpshare=1&scene=23&srcid=0818WK605Hl5ctCkIBFtDP5q#rd)
+
+[5] RecyclerView 的 onTouchEvent(MotionEvent e) 源码
+
+**说明：**
+
+RuleView，针对参考[1]中 TapeView 的源码，进行了一些优化：
+
+ 1） 左侧起始绘制刻度：如果当前绘制的刻度 currentCalibration 为0，即第一个刻度，则不绘制。滑动过程中，会发现最左侧的刻度，有时会突然消失。如果此刻度是带数值的长刻度，那数值也不会显示，界面突变会更明显。把控件宽度为 gapWidth 的整数倍，能立马看到这突变效果
+ 优化：左侧起始刻度，往左多绘制2个刻度单位
+
+ 2） 右侧结束绘制刻度：一直绘制到当前控件的10倍宽，或最大刻度数（totalCalibration = 最大刻度数 + 1，看的时候掉坑了，觉得最大刻度绘制不出来，原来是加了1）
+ 优化：在最大刻度内，右侧结束刻度，与左侧起始刻度一样，多绘制2个刻度单位即可
+
+ 多绘制的刻度单位个数，完全可以根据数值的最大宽度来决定。多了2个刻度单位，因为数值与刻度对称，就有了4个刻度。具体根据项目，多退少补
