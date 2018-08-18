@@ -1,5 +1,6 @@
 # RuleView
 [ ![Download](https://api.bintray.com/packages/zjun615/zjun/RuleView/images/download.svg) ](https://bintray.com/zjun615/zjun/RuleView/_latestVersion)
+
 一系列卷尺控件，包含：基本卷尺控件（体重尺，或其它）、金额卷尺控件、时间卷尺控件
 
 demo中，分别用三个控件，高仿了薄荷健康的体重尺、团贷网的金额尺、海康威视下萤石云视频的时间尺
@@ -47,7 +48,7 @@ demo中以体重尺为例，但不限于此
  - 支持缩放时间刻度
  - 支持多个时间段的显示
  
-## 三、引入到项目（待写。。。）
+## 三、依赖
 > build.gradle in app, the repertory is JCenter:
 
 `implementation 'com.zjun:rule-view:0.0.1'`
