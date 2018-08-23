@@ -204,6 +204,7 @@ RuleView，针对参考[1]中 TapeView 的源码，进行了一些优化：
 经过网友提醒，才发现单词 Rule 写错了，尴尬了⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄。现更改 GitHub 项目名为 RulerView，其它不便修改，保持不变。
 
 ## 八、LICENSE
+```
 Copyright (c) 2018 Ralap
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -217,3 +218,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+```
